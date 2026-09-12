@@ -1,0 +1,10 @@
+C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\arm-none-eabi\include\c++\13.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+../GameBoy/Src/mmu.cc:73:11:u8 read_mbc_helper(GB*, u16)	16	static
+../GameBoy/Src/mmu.cc:75:11:u8 read_FEXX_helper(GB*, u16)	40	static
+../GameBoy/Src/mmu.cc:95:6:void mmu_init_map(GB*)	24	static
+../GameBoy/Src/mmu.cc:125:6:u8 bus_default_read(GB*, u16)	24	static
+../GameBoy/Src/mmu.cc:143:13:u8 bus_dma_oam_read(GB*, u16)	40	static
+../GameBoy/Src/mmu.cc:172:6:u8 bus_read(GB*, u16)	32	static
+../GameBoy/Src/mmu.cc:288:6:void bus_default_lockless_write(GB*, u16, u8)	40	static
+../GameBoy/Src/mmu.cc:304:6:void bus_default_write(GB*, u16, u8)	16	static
+../GameBoy/Src/mmu.cc:317:6:void bus_write(GB*, u16, u8)	40	static

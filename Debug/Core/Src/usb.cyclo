@@ -1,0 +1,11 @@
+../Core/Src/usb.c:38:17:RX_NextIndex	2
+../Core/Src/usb.c:51:17:RX_Available	2
+../Core/Src/usb.c:69:6:USB_Init	1
+../Core/Src/usb.c:82:12:USB_Send	6
+../Core/Src/usb.c:112:12:USB_SendString	2
+../Core/Src/usb.c:131:6:USB_RxCallback	4
+../Core/Src/usb.c:162:10:USB_DataAvailable	1
+../Core/Src/usb.c:168:10:USB_Read	5
+../Core/Src/usb.c:191:6:USB_FlushRX	1
+../Core/Src/usb.c:201:9:USB_IsConnected	1
+../Core/Src/usb.c:211:6:USB_TxCompleteCallback	1

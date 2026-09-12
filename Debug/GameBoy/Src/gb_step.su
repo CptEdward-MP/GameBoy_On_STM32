@@ -1,0 +1,3 @@
+C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\arm-none-eabi\include\c++\13.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+../GameBoy/Src/gb_step.cc:223:6:void gb_update_tima(GB*)	16	static
+../GameBoy/Src/gb_step.cc:281:6:void GB::gb_step()	232	static

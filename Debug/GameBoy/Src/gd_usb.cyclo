@@ -1,0 +1,4 @@
+../GameBoy/Src/gd_usb.c:18:6:GD_USB_Send	1
+../GameBoy/Src/gd_usb.c:28:17:GD_USB_CalculateCRC	4
+../GameBoy/Src/gd_usb.c:58:13:GD_USB_SendFramePacket	2
+../GameBoy/Src/gd_usb.c:100:6:GD_USB_SendFrame	2

@@ -1,0 +1,601 @@
+C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\arm-none-eabi\include\c++\13.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+../GameBoy/Src/opcodes.cc:21:13:void NOP(GB*)	16	static
+../GameBoy/Src/opcodes.cc:27:13:void LD_r_r(GB*, u8*, u8*)	24	static
+../GameBoy/Src/opcodes.cc:34:13:void LD_mrr_r(GB*, u8, u16)	16	static
+../GameBoy/Src/opcodes.cc:45:13:void LD_mn_r(GB*, u8)	24	static
+../GameBoy/Src/opcodes.cc:64:13:void LD_r_mn(GB*, u8*)	24	static
+../GameBoy/Src/opcodes.cc:82:13:void LD_mr_r(GB*, u8, u8)	24	static
+../GameBoy/Src/opcodes.cc:96:13:void LD_r_mr(GB*, u8*, u8)	32	static
+../GameBoy/Src/opcodes.cc:109:13:void LD_r_mrr(GB*, u8*, u16)	24	static
+../GameBoy/Src/opcodes.cc:120:13:void LD_rr_sps8(GB*, u8*, u8*)	80	static
+../GameBoy/Src/opcodes.cc:153:13:void LD_sp_rr(GB*, u16)	16	static
+../GameBoy/Src/opcodes.cc:164:13:void LD_r_n(GB*, u8*)	24	static
+../GameBoy/Src/opcodes.cc:177:13:void LD_r_mnn(GB*, u8*)	24	static
+../GameBoy/Src/opcodes.cc:203:13:void LD_rr_nn(GB*, u8*, u8*)	32	static
+../GameBoy/Src/opcodes.cc:223:13:void LD_mrr_n(GB*, u16)	24	static
+../GameBoy/Src/opcodes.cc:240:13:void LD_mnn_sp(GB*)	24	static
+../GameBoy/Src/opcodes.cc:272:13:void LD_sp_nn(GB*)	24	static
+../GameBoy/Src/opcodes.cc:295:13:void LD_mnn_r(GB*, u8)	24	static
+../GameBoy/Src/opcodes.cc:321:13:void RLCA(GB*)	56	static
+../GameBoy/Src/opcodes.cc:341:13:void RRCA(GB*)	56	static
+../GameBoy/Src/opcodes.cc:360:13:void RLA(GB*)	56	static
+../GameBoy/Src/opcodes.cc:379:13:void RRA(GB*)	56	static
+../GameBoy/Src/opcodes.cc:398:13:void DAA(GB*)	72	static
+../GameBoy/Src/opcodes.cc:437:13:void CPL(GB*)	32	static
+../GameBoy/Src/opcodes.cc:449:13:void SCF(GB*)	40	static
+../GameBoy/Src/opcodes.cc:459:13:void CCF(GB*)	48	static
+../GameBoy/Src/opcodes.cc:471:13:void ADD_rr_rr(GB*, u8*, u8*, u8*, u8*)	88	static
+../GameBoy/Src/opcodes.cc:504:13:void ADD_rr_sp(GB*, u8*, u8*, u16*)	88	static
+../GameBoy/Src/opcodes.cc:538:13:void ADD_r_r(GB*, u8*, u8*)	88	static
+../GameBoy/Src/opcodes.cc:568:13:void ADD_r_mrr(GB*, u8*, u16)	88	static
+../GameBoy/Src/opcodes.cc:589:13:void ADD_r_n(GB*, u8*)	80	static
+../GameBoy/Src/opcodes.cc:666:13:void ADD_sp_s8(GB*)	64	static
+../GameBoy/Src/opcodes.cc:706:13:void ADC(GB*, u8*, u8*)	96	static
+../GameBoy/Src/opcodes.cc:736:13:void ADC_r_mrr(GB*, u8*, u16)	96	static
+../GameBoy/Src/opcodes.cc:765:13:void ADC_r_n(GB*, u8*)	88	static
+../GameBoy/Src/opcodes.cc:804:13:void SUB_r(GB*, u8*)	56	static
+../GameBoy/Src/opcodes.cc:823:13:void SUB_mrr(GB*, u16)	80	static
+../GameBoy/Src/opcodes.cc:849:13:void SUB_n(GB*)	80	static
+../GameBoy/Src/opcodes.cc:874:13:void SBC_r_r(GB*, u8*, u8)	72	static
+../GameBoy/Src/opcodes.cc:895:13:void SBC_r_mrr(GB*, u8*, u16)	88	static
+../GameBoy/Src/opcodes.cc:925:13:void SBC_r_n(GB*, u8*)	88	static
+../GameBoy/Src/opcodes.cc:968:6:void INC_r(GB*, u8*)	56	static
+../GameBoy/Src/opcodes.cc:984:13:void INC_rr(GB*, u8*, u8*)	32	static
+../GameBoy/Src/opcodes.cc:998:13:void INC_sp(GB*, u16*)	16	static
+../GameBoy/Src/opcodes.cc:1009:13:void INC_mrr(GB*, u16)	48	static
+../GameBoy/Src/opcodes.cc:1037:6:void DEC_r(GB*, u8*)	56	static
+../GameBoy/Src/opcodes.cc:1053:13:void DEC_rr(GB*, u8*, u8*)	32	static
+../GameBoy/Src/opcodes.cc:1067:13:void DEC_sp(GB*, u16*)	16	static
+../GameBoy/Src/opcodes.cc:1078:13:void DEC_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:1100:13:void JR_s8(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1139:13:void JR_flag(GB*, bool, bool)	24	static
+../GameBoy/Src/opcodes.cc:1171:13:void AND(GB*, u8*)	56	static
+../GameBoy/Src/opcodes.cc:1188:13:void AND_n(GB*)	64	static
+../GameBoy/Src/opcodes.cc:1209:13:void AND_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:1229:13:void XOR(GB*, u8*)	64	static
+../GameBoy/Src/opcodes.cc:1246:13:void XOR_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:1265:13:void XOR_n(GB*)	64	static
+../GameBoy/Src/opcodes.cc:1285:13:void OR(GB*, u8*)	64	static
+../GameBoy/Src/opcodes.cc:1302:13:void OR_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:1322:13:void OR_n(GB*)	64	static
+../GameBoy/Src/opcodes.cc:1340:13:void CP(GB*, u8*)	72	static
+../GameBoy/Src/opcodes.cc:1358:13:void CP_r_mrr(GB*, u8*, u16)	88	static
+../GameBoy/Src/opcodes.cc:1379:13:void CP_r_n(GB*, u8)	80	static
+../GameBoy/Src/opcodes.cc:1415:13:void RET_flag(GB*, bool, bool)	24	static
+../GameBoy/Src/opcodes.cc:1452:13:void RET(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1476:13:void RETI(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1502:13:void POP_rr(GB*, u8*, u8*)	32	static
+../GameBoy/Src/opcodes.cc:1530:13:void JP_nn_flag(GB*, bool, bool)	24	static
+../GameBoy/Src/opcodes.cc:1563:13:void JP_nn(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1586:13:void JP_rr(GB*, u16)	16	static
+../GameBoy/Src/opcodes.cc:1596:13:void CALL_flag(GB*, bool, bool)	24	static
+../GameBoy/Src/opcodes.cc:1640:13:void CALL(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1675:13:void PUSH_rr(GB*, u16)	16	static
+../GameBoy/Src/opcodes.cc:1697:13:void RST(GB*, u8)	16	static
+../GameBoy/Src/opcodes.cc:1720:13:void DI(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1729:13:void EI(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1738:13:void HALT(GB*)	32	static
+../GameBoy/Src/opcodes.cc:1769:13:void STOP(GB*)	32	static
+../GameBoy/Src/opcodes.cc:1803:13:void cpu_op_0x00(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1804:13:void cpu_op_0x01(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1805:13:void cpu_op_0x02(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1806:13:void cpu_op_0x03(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1807:13:void cpu_op_0x04(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1808:13:void cpu_op_0x05(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1809:13:void cpu_op_0x06(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1810:13:void cpu_op_0x07(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1811:13:void cpu_op_0x08(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1812:13:void cpu_op_0x09(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1813:13:void cpu_op_0x0A(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1814:13:void cpu_op_0x0B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1815:13:void cpu_op_0x0C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1816:13:void cpu_op_0x0D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1817:13:void cpu_op_0x0E(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1818:13:void cpu_op_0x0F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1821:13:void cpu_op_0x10(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1822:13:void cpu_op_0x11(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1823:13:void cpu_op_0x12(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1824:13:void cpu_op_0x13(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1825:13:void cpu_op_0x14(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1826:13:void cpu_op_0x15(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1827:13:void cpu_op_0x16(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1828:13:void cpu_op_0x17(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1829:13:void cpu_op_0x18(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1830:13:void cpu_op_0x19(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1831:13:void cpu_op_0x1A(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1832:13:void cpu_op_0x1B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1833:13:void cpu_op_0x1C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1834:13:void cpu_op_0x1D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1835:13:void cpu_op_0x1E(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1836:13:void cpu_op_0x1F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1840:13:void cpu_op_0x20(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1841:13:void cpu_op_0x21(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1842:13:void cpu_op_0x22(GB*)	32	static
+../GameBoy/Src/opcodes.cc:1848:13:void cpu_op_0x23(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1849:13:void cpu_op_0x24(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1850:13:void cpu_op_0x25(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1851:13:void cpu_op_0x26(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1852:13:void cpu_op_0x27(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1853:13:void cpu_op_0x28(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1854:13:void cpu_op_0x29(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1855:13:void cpu_op_0x2A(GB*)	32	static
+../GameBoy/Src/opcodes.cc:1861:13:void cpu_op_0x2B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1862:13:void cpu_op_0x2C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1863:13:void cpu_op_0x2D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1864:13:void cpu_op_0x2E(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1865:13:void cpu_op_0x2F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1869:13:void cpu_op_0x30(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1870:13:void cpu_op_0x31(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1871:13:void cpu_op_0x32(GB*)	32	static
+../GameBoy/Src/opcodes.cc:1877:13:void cpu_op_0x33(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1878:13:void cpu_op_0x34(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1879:13:void cpu_op_0x35(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1880:13:void cpu_op_0x36(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1881:13:void cpu_op_0x37(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1882:13:void cpu_op_0x38(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1883:13:void cpu_op_0x39(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1884:13:void cpu_op_0x3A(GB*)	32	static
+../GameBoy/Src/opcodes.cc:1890:13:void cpu_op_0x3B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1891:13:void cpu_op_0x3C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1892:13:void cpu_op_0x3D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1893:13:void cpu_op_0x3E(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1894:13:void cpu_op_0x3F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1898:13:void cpu_op_0x40(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1899:13:void cpu_op_0x41(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1900:13:void cpu_op_0x42(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1901:13:void cpu_op_0x43(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1902:13:void cpu_op_0x44(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1903:13:void cpu_op_0x45(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1904:13:void cpu_op_0x46(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1905:13:void cpu_op_0x47(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1906:13:void cpu_op_0x48(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1907:13:void cpu_op_0x49(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1908:13:void cpu_op_0x4A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1909:13:void cpu_op_0x4B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1910:13:void cpu_op_0x4C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1911:13:void cpu_op_0x4D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1912:13:void cpu_op_0x4E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1913:13:void cpu_op_0x4F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1917:13:void cpu_op_0x50(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1918:13:void cpu_op_0x51(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1919:13:void cpu_op_0x52(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1920:13:void cpu_op_0x53(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1921:13:void cpu_op_0x54(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1922:13:void cpu_op_0x55(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1923:13:void cpu_op_0x56(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1924:13:void cpu_op_0x57(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1925:13:void cpu_op_0x58(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1926:13:void cpu_op_0x59(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1927:13:void cpu_op_0x5A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1928:13:void cpu_op_0x5B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1929:13:void cpu_op_0x5C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1930:13:void cpu_op_0x5D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1931:13:void cpu_op_0x5E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1932:13:void cpu_op_0x5F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1936:13:void cpu_op_0x60(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1937:13:void cpu_op_0x61(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1938:13:void cpu_op_0x62(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1939:13:void cpu_op_0x63(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1940:13:void cpu_op_0x64(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1941:13:void cpu_op_0x65(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1942:13:void cpu_op_0x66(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1943:13:void cpu_op_0x67(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1944:13:void cpu_op_0x68(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1945:13:void cpu_op_0x69(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1946:13:void cpu_op_0x6A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1947:13:void cpu_op_0x6B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1948:13:void cpu_op_0x6C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1949:13:void cpu_op_0x6D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1950:13:void cpu_op_0x6E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1951:13:void cpu_op_0x6F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1955:13:void cpu_op_0x70(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1956:13:void cpu_op_0x71(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1957:13:void cpu_op_0x72(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1958:13:void cpu_op_0x73(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1959:13:void cpu_op_0x74(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1960:13:void cpu_op_0x75(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1961:13:void cpu_op_0x76(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1962:13:void cpu_op_0x77(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1963:13:void cpu_op_0x78(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1964:13:void cpu_op_0x79(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1965:13:void cpu_op_0x7A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1966:13:void cpu_op_0x7B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1967:13:void cpu_op_0x7C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1968:13:void cpu_op_0x7D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1969:13:void cpu_op_0x7E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1970:13:void cpu_op_0x7F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1974:13:void cpu_op_0x80(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1975:13:void cpu_op_0x81(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1976:13:void cpu_op_0x82(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1977:13:void cpu_op_0x83(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1978:13:void cpu_op_0x84(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1979:13:void cpu_op_0x85(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1980:13:void cpu_op_0x86(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1981:13:void cpu_op_0x87(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1982:13:void cpu_op_0x88(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1983:13:void cpu_op_0x89(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1984:13:void cpu_op_0x8A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1985:13:void cpu_op_0x8B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1986:13:void cpu_op_0x8C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1987:13:void cpu_op_0x8D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1988:13:void cpu_op_0x8E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:1989:13:void cpu_op_0x8F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1993:13:void cpu_op_0x90(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1994:13:void cpu_op_0x91(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1995:13:void cpu_op_0x92(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1996:13:void cpu_op_0x93(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1997:13:void cpu_op_0x94(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1998:13:void cpu_op_0x95(GB*)	16	static
+../GameBoy/Src/opcodes.cc:1999:13:void cpu_op_0x96(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2000:13:void cpu_op_0x97(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2001:13:void cpu_op_0x98(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2002:13:void cpu_op_0x99(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2003:13:void cpu_op_0x9A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2004:13:void cpu_op_0x9B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2005:13:void cpu_op_0x9C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2006:13:void cpu_op_0x9D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2007:13:void cpu_op_0x9E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2008:13:void cpu_op_0x9F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2012:13:void cpu_op_0xA0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2013:13:void cpu_op_0xA1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2014:13:void cpu_op_0xA2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2015:13:void cpu_op_0xA3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2016:13:void cpu_op_0xA4(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2017:13:void cpu_op_0xA5(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2018:13:void cpu_op_0xA6(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2019:13:void cpu_op_0xA7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2020:13:void cpu_op_0xA8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2021:13:void cpu_op_0xA9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2022:13:void cpu_op_0xAA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2023:13:void cpu_op_0xAB(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2024:13:void cpu_op_0xAC(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2025:13:void cpu_op_0xAD(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2026:13:void cpu_op_0xAE(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2027:13:void cpu_op_0xAF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2031:13:void cpu_op_0xB0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2032:13:void cpu_op_0xB1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2033:13:void cpu_op_0xB2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2034:13:void cpu_op_0xB3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2035:13:void cpu_op_0xB4(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2036:13:void cpu_op_0xB5(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2037:13:void cpu_op_0xB6(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2038:13:void cpu_op_0xB7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2039:13:void cpu_op_0xB8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2040:13:void cpu_op_0xB9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2041:13:void cpu_op_0xBA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2042:13:void cpu_op_0xBB(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2043:13:void cpu_op_0xBC(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2044:13:void cpu_op_0xBD(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2045:13:void cpu_op_0xBE(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2046:13:void cpu_op_0xBF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2050:13:void cpu_op_0xC0(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2051:13:void cpu_op_0xC1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2052:13:void cpu_op_0xC2(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2053:13:void cpu_op_0xC3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2054:13:void cpu_op_0xC4(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2055:13:void cpu_op_0xC5(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2056:13:void cpu_op_0xC6(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2057:13:void cpu_op_0xC7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2058:13:void cpu_op_0xC8(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2059:13:void cpu_op_0xC9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2060:13:void cpu_op_0xCA(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2062:13:void cpu_op_0xCC(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2063:13:void cpu_op_0xCD(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2064:13:void cpu_op_0xCE(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2065:13:void cpu_op_0xCF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2069:13:void cpu_op_0xD0(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2070:13:void cpu_op_0xD1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2071:13:void cpu_op_0xD2(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2073:13:void cpu_op_0xD4(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2074:13:void cpu_op_0xD5(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2075:13:void cpu_op_0xD6(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2076:13:void cpu_op_0xD7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2077:13:void cpu_op_0xD8(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2078:13:void cpu_op_0xD9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2079:13:void cpu_op_0xDA(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2081:13:void cpu_op_0xDC(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2083:13:void cpu_op_0xDE(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2084:13:void cpu_op_0xDF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2088:13:void cpu_op_0xE0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2089:13:void cpu_op_0xE1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2090:13:void cpu_op_0xE2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2093:13:void cpu_op_0xE5(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2094:13:void cpu_op_0xE6(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2095:13:void cpu_op_0xE7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2096:13:void cpu_op_0xE8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2097:13:void cpu_op_0xE9(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2098:13:void cpu_op_0xEA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2102:13:void cpu_op_0xEE(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2103:13:void cpu_op_0xEF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2107:13:void cpu_op_0xF0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2108:13:void cpu_op_0xF1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2109:13:void cpu_op_0xF2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2110:13:void cpu_op_0xF3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2112:13:void cpu_op_0xF5(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2113:13:void cpu_op_0xF6(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2114:13:void cpu_op_0xF7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2115:13:void cpu_op_0xF8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2116:13:void cpu_op_0xF9(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2117:13:void cpu_op_0xFA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2118:13:void cpu_op_0xFB(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2121:13:void cpu_op_0xFE(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2122:13:void cpu_op_0xFF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2126:13:void cpu_op_illegal(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2136:13:void RLC_r(GB*, u8*)	64	static
+../GameBoy/Src/opcodes.cc:2149:13:void RLC_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:2172:13:void RRC_r(GB*, u8*)	64	static
+../GameBoy/Src/opcodes.cc:2185:13:void RRC_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:2208:13:void RL_r(GB*, u8*)	56	static
+../GameBoy/Src/opcodes.cc:2224:13:void RL_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:2250:13:void RR_r(GB*, u8*)	64	static
+../GameBoy/Src/opcodes.cc:2264:13:void RR_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:2292:13:void SLA_r(GB*, u8*)	64	static
+../GameBoy/Src/opcodes.cc:2308:13:void SLA_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:2335:13:void SRA_r(GB*, u8*)	56	static
+../GameBoy/Src/opcodes.cc:2350:13:void SRA_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:2375:13:void SWAP_r(GB*, u8*)	64	static
+../GameBoy/Src/opcodes.cc:2391:13:void SWAP_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:2415:13:void SRL_r(GB*, u8*)	56	static
+../GameBoy/Src/opcodes.cc:2429:13:void SRL_mrr(GB*, u16)	64	static
+../GameBoy/Src/opcodes.cc:2454:13:void BIT_b_r(GB*, u8, u8*)	64	static
+../GameBoy/Src/opcodes.cc:2467:13:void BIT_b_mrr(GB*, u8, u16)	56	static
+../GameBoy/Src/opcodes.cc:2484:13:void RES_b_r(GB*, u8, u8*)	24	static
+../GameBoy/Src/opcodes.cc:2492:13:void RES_b_mrr(GB*, u8, u16)	24	static
+../GameBoy/Src/opcodes.cc:2510:13:void SET_b_r(GB*, u8, u8*)	24	static
+../GameBoy/Src/opcodes.cc:2518:13:void SET_b_mrr(GB*, u8, u16)	24	static
+../GameBoy/Src/opcodes.cc:2536:13:void cpu_op_0xCB00(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2537:13:void cpu_op_0xCB01(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2538:13:void cpu_op_0xCB02(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2539:13:void cpu_op_0xCB03(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2540:13:void cpu_op_0xCB04(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2541:13:void cpu_op_0xCB05(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2542:13:void cpu_op_0xCB06(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2543:13:void cpu_op_0xCB07(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2544:13:void cpu_op_0xCB08(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2545:13:void cpu_op_0xCB09(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2546:13:void cpu_op_0xCB0A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2547:13:void cpu_op_0xCB0B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2548:13:void cpu_op_0xCB0C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2549:13:void cpu_op_0xCB0D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2550:13:void cpu_op_0xCB0E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2551:13:void cpu_op_0xCB0F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2553:13:void cpu_op_0xCB10(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2554:13:void cpu_op_0xCB11(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2555:13:void cpu_op_0xCB12(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2556:13:void cpu_op_0xCB13(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2557:13:void cpu_op_0xCB14(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2558:13:void cpu_op_0xCB15(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2559:13:void cpu_op_0xCB16(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2560:13:void cpu_op_0xCB17(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2561:13:void cpu_op_0xCB18(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2562:13:void cpu_op_0xCB19(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2563:13:void cpu_op_0xCB1A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2564:13:void cpu_op_0xCB1B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2565:13:void cpu_op_0xCB1C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2566:13:void cpu_op_0xCB1D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2567:13:void cpu_op_0xCB1E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2568:13:void cpu_op_0xCB1F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2570:13:void cpu_op_0xCB20(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2571:13:void cpu_op_0xCB21(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2572:13:void cpu_op_0xCB22(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2573:13:void cpu_op_0xCB23(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2574:13:void cpu_op_0xCB24(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2575:13:void cpu_op_0xCB25(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2576:13:void cpu_op_0xCB26(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2577:13:void cpu_op_0xCB27(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2578:13:void cpu_op_0xCB28(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2579:13:void cpu_op_0xCB29(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2580:13:void cpu_op_0xCB2A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2581:13:void cpu_op_0xCB2B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2582:13:void cpu_op_0xCB2C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2583:13:void cpu_op_0xCB2D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2584:13:void cpu_op_0xCB2E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2585:13:void cpu_op_0xCB2F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2587:13:void cpu_op_0xCB30(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2588:13:void cpu_op_0xCB31(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2589:13:void cpu_op_0xCB32(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2590:13:void cpu_op_0xCB33(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2591:13:void cpu_op_0xCB34(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2592:13:void cpu_op_0xCB35(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2593:13:void cpu_op_0xCB36(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2594:13:void cpu_op_0xCB37(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2595:13:void cpu_op_0xCB38(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2596:13:void cpu_op_0xCB39(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2597:13:void cpu_op_0xCB3A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2598:13:void cpu_op_0xCB3B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2599:13:void cpu_op_0xCB3C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2600:13:void cpu_op_0xCB3D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2601:13:void cpu_op_0xCB3E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2602:13:void cpu_op_0xCB3F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2604:13:void cpu_op_0xCB40(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2605:13:void cpu_op_0xCB41(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2606:13:void cpu_op_0xCB42(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2607:13:void cpu_op_0xCB43(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2608:13:void cpu_op_0xCB44(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2609:13:void cpu_op_0xCB45(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2610:13:void cpu_op_0xCB46(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2611:13:void cpu_op_0xCB47(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2612:13:void cpu_op_0xCB48(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2613:13:void cpu_op_0xCB49(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2614:13:void cpu_op_0xCB4A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2615:13:void cpu_op_0xCB4B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2616:13:void cpu_op_0xCB4C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2617:13:void cpu_op_0xCB4D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2618:13:void cpu_op_0xCB4E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2619:13:void cpu_op_0xCB4F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2621:13:void cpu_op_0xCB50(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2622:13:void cpu_op_0xCB51(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2623:13:void cpu_op_0xCB52(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2624:13:void cpu_op_0xCB53(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2625:13:void cpu_op_0xCB54(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2626:13:void cpu_op_0xCB55(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2627:13:void cpu_op_0xCB56(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2628:13:void cpu_op_0xCB57(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2629:13:void cpu_op_0xCB58(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2630:13:void cpu_op_0xCB59(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2631:13:void cpu_op_0xCB5A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2632:13:void cpu_op_0xCB5B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2633:13:void cpu_op_0xCB5C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2634:13:void cpu_op_0xCB5D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2635:13:void cpu_op_0xCB5E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2636:13:void cpu_op_0xCB5F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2638:13:void cpu_op_0xCB60(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2639:13:void cpu_op_0xCB61(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2640:13:void cpu_op_0xCB62(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2641:13:void cpu_op_0xCB63(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2642:13:void cpu_op_0xCB64(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2643:13:void cpu_op_0xCB65(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2644:13:void cpu_op_0xCB66(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2645:13:void cpu_op_0xCB67(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2646:13:void cpu_op_0xCB68(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2647:13:void cpu_op_0xCB69(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2648:13:void cpu_op_0xCB6A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2649:13:void cpu_op_0xCB6B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2650:13:void cpu_op_0xCB6C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2651:13:void cpu_op_0xCB6D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2652:13:void cpu_op_0xCB6E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2653:13:void cpu_op_0xCB6F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2655:13:void cpu_op_0xCB70(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2656:13:void cpu_op_0xCB71(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2657:13:void cpu_op_0xCB72(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2658:13:void cpu_op_0xCB73(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2659:13:void cpu_op_0xCB74(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2660:13:void cpu_op_0xCB75(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2661:13:void cpu_op_0xCB76(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2662:13:void cpu_op_0xCB77(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2663:13:void cpu_op_0xCB78(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2664:13:void cpu_op_0xCB79(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2665:13:void cpu_op_0xCB7A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2666:13:void cpu_op_0xCB7B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2667:13:void cpu_op_0xCB7C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2668:13:void cpu_op_0xCB7D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2669:13:void cpu_op_0xCB7E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2670:13:void cpu_op_0xCB7F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2672:13:void cpu_op_0xCB80(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2673:13:void cpu_op_0xCB81(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2674:13:void cpu_op_0xCB82(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2675:13:void cpu_op_0xCB83(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2676:13:void cpu_op_0xCB84(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2677:13:void cpu_op_0xCB85(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2678:13:void cpu_op_0xCB86(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2679:13:void cpu_op_0xCB87(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2680:13:void cpu_op_0xCB88(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2681:13:void cpu_op_0xCB89(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2682:13:void cpu_op_0xCB8A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2683:13:void cpu_op_0xCB8B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2684:13:void cpu_op_0xCB8C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2685:13:void cpu_op_0xCB8D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2686:13:void cpu_op_0xCB8E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2687:13:void cpu_op_0xCB8F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2689:13:void cpu_op_0xCB90(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2690:13:void cpu_op_0xCB91(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2691:13:void cpu_op_0xCB92(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2692:13:void cpu_op_0xCB93(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2693:13:void cpu_op_0xCB94(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2694:13:void cpu_op_0xCB95(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2695:13:void cpu_op_0xCB96(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2696:13:void cpu_op_0xCB97(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2697:13:void cpu_op_0xCB98(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2698:13:void cpu_op_0xCB99(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2699:13:void cpu_op_0xCB9A(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2700:13:void cpu_op_0xCB9B(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2701:13:void cpu_op_0xCB9C(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2702:13:void cpu_op_0xCB9D(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2703:13:void cpu_op_0xCB9E(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2704:13:void cpu_op_0xCB9F(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2706:13:void cpu_op_0xCBA0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2707:13:void cpu_op_0xCBA1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2708:13:void cpu_op_0xCBA2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2709:13:void cpu_op_0xCBA3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2710:13:void cpu_op_0xCBA4(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2711:13:void cpu_op_0xCBA5(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2712:13:void cpu_op_0xCBA6(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2713:13:void cpu_op_0xCBA7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2714:13:void cpu_op_0xCBA8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2715:13:void cpu_op_0xCBA9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2716:13:void cpu_op_0xCBAA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2717:13:void cpu_op_0xCBAB(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2718:13:void cpu_op_0xCBAC(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2719:13:void cpu_op_0xCBAD(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2720:13:void cpu_op_0xCBAE(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2721:13:void cpu_op_0xCBAF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2723:13:void cpu_op_0xCBB0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2724:13:void cpu_op_0xCBB1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2725:13:void cpu_op_0xCBB2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2726:13:void cpu_op_0xCBB3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2727:13:void cpu_op_0xCBB4(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2728:13:void cpu_op_0xCBB5(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2729:13:void cpu_op_0xCBB6(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2730:13:void cpu_op_0xCBB7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2731:13:void cpu_op_0xCBB8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2732:13:void cpu_op_0xCBB9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2733:13:void cpu_op_0xCBBA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2734:13:void cpu_op_0xCBBB(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2735:13:void cpu_op_0xCBBC(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2736:13:void cpu_op_0xCBBD(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2737:13:void cpu_op_0xCBBE(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2738:13:void cpu_op_0xCBBF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2740:13:void cpu_op_0xCBC0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2741:13:void cpu_op_0xCBC1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2742:13:void cpu_op_0xCBC2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2743:13:void cpu_op_0xCBC3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2744:13:void cpu_op_0xCBC4(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2745:13:void cpu_op_0xCBC5(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2746:13:void cpu_op_0xCBC6(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2747:13:void cpu_op_0xCBC7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2748:13:void cpu_op_0xCBC8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2749:13:void cpu_op_0xCBC9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2750:13:void cpu_op_0xCBCA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2751:13:void cpu_op_0xCBCB(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2752:13:void cpu_op_0xCBCC(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2753:13:void cpu_op_0xCBCD(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2754:13:void cpu_op_0xCBCE(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2755:13:void cpu_op_0xCBCF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2757:13:void cpu_op_0xCBD0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2758:13:void cpu_op_0xCBD1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2759:13:void cpu_op_0xCBD2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2760:13:void cpu_op_0xCBD3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2761:13:void cpu_op_0xCBD4(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2762:13:void cpu_op_0xCBD5(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2763:13:void cpu_op_0xCBD6(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2764:13:void cpu_op_0xCBD7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2765:13:void cpu_op_0xCBD8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2766:13:void cpu_op_0xCBD9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2767:13:void cpu_op_0xCBDA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2768:13:void cpu_op_0xCBDB(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2769:13:void cpu_op_0xCBDC(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2770:13:void cpu_op_0xCBDD(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2771:13:void cpu_op_0xCBDE(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2772:13:void cpu_op_0xCBDF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2774:13:void cpu_op_0xCBE0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2775:13:void cpu_op_0xCBE1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2776:13:void cpu_op_0xCBE2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2777:13:void cpu_op_0xCBE3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2778:13:void cpu_op_0xCBE4(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2779:13:void cpu_op_0xCBE5(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2780:13:void cpu_op_0xCBE6(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2781:13:void cpu_op_0xCBE7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2782:13:void cpu_op_0xCBE8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2783:13:void cpu_op_0xCBE9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2784:13:void cpu_op_0xCBEA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2785:13:void cpu_op_0xCBEB(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2786:13:void cpu_op_0xCBEC(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2787:13:void cpu_op_0xCBED(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2788:13:void cpu_op_0xCBEE(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2789:13:void cpu_op_0xCBEF(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2791:13:void cpu_op_0xCBF0(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2792:13:void cpu_op_0xCBF1(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2793:13:void cpu_op_0xCBF2(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2794:13:void cpu_op_0xCBF3(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2795:13:void cpu_op_0xCBF4(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2796:13:void cpu_op_0xCBF5(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2797:13:void cpu_op_0xCBF6(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2798:13:void cpu_op_0xCBF7(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2799:13:void cpu_op_0xCBF8(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2800:13:void cpu_op_0xCBF9(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2801:13:void cpu_op_0xCBFA(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2802:13:void cpu_op_0xCBFB(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2803:13:void cpu_op_0xCBFC(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2804:13:void cpu_op_0xCBFD(GB*)	16	static
+../GameBoy/Src/opcodes.cc:2805:13:void cpu_op_0xCBFE(GB*)	24	static
+../GameBoy/Src/opcodes.cc:2806:13:void cpu_op_0xCBFF(GB*)	16	static
