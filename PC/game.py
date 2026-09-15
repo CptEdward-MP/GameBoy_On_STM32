@@ -12,7 +12,7 @@ WIDTH = 160
 HEIGHT = 144
 SCALE = 5
 
-FRAME_SIZE = WIDTH * HEIGHT
+FRAME_SIZE = WIDTH * HEIGHT*2
 
 # ============================================================
 # Packet Configuration
@@ -270,7 +270,6 @@ while running:
         "bytes"
     )
 
-
     # --------------------------------------------------------
     # Draw framebuffer
     # --------------------------------------------------------
@@ -279,17 +278,26 @@ while running:
 
         for x in range(WIDTH):
 
-            pixel = data[
-                y * WIDTH + x
-            ]
+            index = (y * WIDTH + x) * 2
 
-            color = PALETTE[
-                pixel & 0x03
-            ]
+            pixel = (
+                data[index]
+                | (data[index + 1] << 8)
+            )
+
+            # RGB555-style Game Boy pixel
+            r = (pixel >> 10) & 0x1F
+            g = (pixel >> 5) & 0x1F
+            b = pixel & 0x1F
+
+            # 5-bit -> 8-bit
+            r = (r * 255) // 31
+            g = (g * 255) // 31
+            b = (b * 255) // 31
 
             pygame.draw.rect(
                 screen,
-                color,
+                (r, g, b),
                 (
                     x * SCALE,
                     y * SCALE,

@@ -3,11 +3,15 @@
 #include "gb.h"
 #include "loop.h"
 
+
+
 static GB gameboy;
+//
+//static float cycle_accumulator = 0.0f;
+//
+//static constexpr float MCYCLES_PER_FRAME = 17556.0f;
 
-static float cycle_accumulator = 0.0f;
-
-static constexpr float MCYCLES_PER_FRAME = 17556.0f;
+extern "C" volatile uint32_t gb_frame_counter = 0;
 
 
 volatile uint32_t gb_loop_count = 0;
@@ -33,23 +37,25 @@ uint32_t GameBoy_GetDebugStage(void)
     return gb_debug_stage;
 }
 
-extern "C"
-void GameBoy_RunFrame(void)
-{
-    uint32_t frame_cycles = 0;
-
-    while (cycle_accumulator <= MCYCLES_PER_FRAME)
-    {
-        float cycles = static_cast<float>(gb_loop(&gameboy));
-
-        cycle_accumulator += cycles;
-        frame_cycles += (uint32_t)cycles;
-    }
-
-    cycle_accumulator -= MCYCLES_PER_FRAME;
-
-    gb_frame_cycles = frame_cycles;
-}
+//extern "C"
+//void GameBoy_RunFrame(void)
+//{
+//    uint32_t frame_cycles = 0;
+//
+//    while (cycle_accumulator <= MCYCLES_PER_FRAME)
+//    {
+//        float cycles = static_cast<float>(gb_loop(&gameboy));
+//
+//        cycle_accumulator += cycles;
+//        frame_cycles += (uint32_t)cycles;
+//    }
+//
+//    cycle_accumulator -= MCYCLES_PER_FRAME;
+//
+//    gb_frame_cycles = frame_cycles;
+//
+//    gb_frame_counter++;
+//}
 //extern "C"
 //void GameBoy_RunFrame(void)
 //{
@@ -235,4 +241,28 @@ void GameBoy_GetPaletteStats(uint32_t *white,
         else if (p == 0x0001)
             (*black)++;
     }
+}
+
+
+extern "C"
+const uint16_t *GameBoy_GetFrameBuffer(void)
+{
+    return gameboy.mmu.gb_framebuffer;
+}
+
+
+
+static float cycle_accumulator = 0.0f;
+static constexpr float MCYCLES_PER_FRAME = 17556.0f;
+
+extern "C"
+void GameBoy_RunFrame(void)
+{
+    while (cycle_accumulator < MCYCLES_PER_FRAME)
+    {
+        cycle_accumulator +=
+            static_cast<float>(gb_loop(&gameboy));
+    }
+
+    cycle_accumulator -= MCYCLES_PER_FRAME;
 }

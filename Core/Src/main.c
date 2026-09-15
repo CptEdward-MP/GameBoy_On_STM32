@@ -22,13 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
 
-#include "usb.h"
-#include "gd_usb.h"
-
-#include "gameboy_rom.h"
-#include "gameboy_bridge.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,11 +43,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t rx_buffer[64];
-
-static uint8_t gameboy_framebuffer[160 * 144];
-
-
 
 /* USER CODE END PV */
 
@@ -66,9 +55,25 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void App_Test(void)
+#include "gameboy_bridge.h"
+#include "gameboy_rom.h"
+#include "usb.h"
+
+#include "ppu_profiler.h"
+
+#include <stdio.h>
+
+extern volatile uint32_t ppu_bg_cycles;
+extern volatile uint32_t ppu_sprite_cycles;
+extern volatile uint32_t ppu_scan_cycles;
+extern volatile uint32_t ppu_framebuffer_cycles;
+
+extern volatile uint32_t ppu_drawing_calls;
+
+
+uint32_t STM32_GetCycles(void)
 {
-    USB_SendString("Hello from STM32\r\n");
+    return DWT->CYCCNT;
 }
 /* USER CODE END 0 */
 
@@ -89,12 +94,6 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  uint32_t reset_flags = RCC->CSR;
-
-  /* Clear the reset flags so the next reset gives us fresh information */
-  RCC->CSR |= RCC_CSR_RMVF;
-
-
 
   /* USER CODE END Init */
 
@@ -109,147 +108,113 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
+
   USB_Init();
 
-  HAL_Delay(5000);
 
-  if (reset_flags & RCC_CSR_SFTRSTF)
-  {
-      USB_SendString("SOFTWARE RESET\r\n");
-  }
-  else if (reset_flags & RCC_CSR_WWDGRSTF)
-  {
-      USB_SendString("WINDOW WATCHDOG RESET\r\n");
-  }
-  else if (reset_flags & RCC_CSR_IWDGRSTF)
-  {
-      USB_SendString("INDEPENDENT WATCHDOG RESET\r\n");
-  }
-  else if (reset_flags & RCC_CSR_PINRSTF)
-  {
-      USB_SendString("PIN RESET\r\n");
-  }
-  else if (reset_flags & RCC_CSR_BORRSTF)
-  {
-      USB_SendString("BROWNOUT RESET\r\n");
-  }
-  else if (reset_flags & RCC_CSR_PORRSTF)
-  {
-      USB_SendString("POWER RESET\r\n");
-  }
-  else
-  {
-      USB_SendString("NO KNOWN RESET FLAG\r\n");
-  }
 
-  HAL_Delay(1000);
+  USB_SendString("\r\n=== PPU Timing Analysis ===\r\n");
 
-  USB_SendString("1\r\n");
-  HAL_Delay(1000);
 
-  USB_SendString("2\r\n");
-  HAL_Delay(1000);
+
+
+     //========================  Time Analysis  ==================================//
+     /* Enable DWT cycle counter */
+     CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+     DWT->CYCCNT = 0;
+     DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+
+     GameBoy_Init(gameboy_rom, gameboy_rom_size);
+
+     ppu_set_cycle_counter(STM32_GetCycles);
+
+     USB_SendString("Running one frame...\r\n");
+
+     uint32_t start = DWT->CYCCNT;
+
+     GameBoy_RunFrame();
+
+     uint32_t total_cycles = DWT->CYCCNT - start;
+     //=============================================================//
 
 
 
 
 
-  //==============================================================//
-  char msges[64];
 
-  snprintf(msges, sizeof(msges),
-           "ROM SIZE: %lu\r\n",
-           (unsigned long)gameboy_rom_size);
+     char msg[64];
 
-  USB_SendString(msges);
+     /* Total */
+     snprintf(msg, sizeof(msg),
+              "Total:        %lu cycles\r\n",
+              (unsigned long)total_cycles);
+     USB_SendString(msg);
+     HAL_Delay(100);
 
-  //===============================================================//
+     /* BG FIFO */
+     snprintf(msg, sizeof(msg),
+              "BG FIFO:      %lu cycles\r\n",
+              (unsigned long)ppu_bg_cycles);
+     USB_SendString(msg);
+     HAL_Delay(100);
+
+     /* Sprite FIFO */
+     snprintf(msg, sizeof(msg),
+              "Sprite FIFO:  %lu cycles\r\n",
+              (unsigned long)ppu_sprite_cycles);
+     USB_SendString(msg);
+     HAL_Delay(100);
+
+     /* Sprite Scan */
+     snprintf(msg, sizeof(msg),
+              "Sprite Scan:  %lu cycles\r\n",
+              (unsigned long)ppu_scan_cycles);
+     USB_SendString(msg);
+     HAL_Delay(100);
+
+     /* Framebuffer */
+     snprintf(msg, sizeof(msg),
+              "Framebuffer:  %lu cycles\r\n",
+              (unsigned long)ppu_framebuffer_cycles);
+     USB_SendString(msg);
+     HAL_Delay(100);
+
+     /* Convert total to milliseconds at 60 MHz */
+     uint32_t total_ms = total_cycles / 60000U;
+
+     snprintf(msg, sizeof(msg),
+              "Total time:   %lu ms\r\n",
+              (unsigned long)total_ms);
+     USB_SendString(msg);
+
+     HAL_Delay(100);
 
 
+     snprintf(msg, sizeof(msg),
+              "Drawing calls: %lu\r\n",
+              (unsigned long)ppu_drawing_calls);
+     USB_SendString(msg);
+
+     HAL_Delay(100);
+
+     USB_SendString("=== Done ===\r\n");
+
+     while (1)
+     {
+     }
 
 
-  GameBoy_TestCartInit(gameboy_rom, gameboy_rom_size);
-  HAL_Delay(1000);
-//  char msg[64];
-//
-//  snprintf(msg, sizeof(msg),
-//           "CART STAGE: %lu\r\n",
-//           (unsigned long)GameBoy_GetDebugStage());
-HAL_Delay(1000);
-//  USB_SendString(msg);
-  USB_SendString("3\r\n");
-  HAL_Delay(1000);
+  /* USER CODE END 2 */
 
-
-
-  GameBoy_TestGBInit();
-
-  USB_SendString("4\r\n");
-  HAL_Delay(1000);
-
-
-  uint32_t white;
-  uint32_t light_gray;
-  uint32_t dark_gray;
-  uint32_t black;
-
-  char palette_msg[128];
-
-  char msg[128];
-
-
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
   while (1)
   {
-      GameBoy_RunFrame();
+    /* USER CODE END WHILE */
 
-      GameBoy_GetFrame(gameboy_framebuffer);
-
-      GD_USB_SendFrame(gameboy_framebuffer);
-
-      HAL_Delay(100);
+    /* USER CODE BEGIN 3 */
   }
-
-  while (1)
-  {
-      GameBoy_RunFrame();
-
-      GameBoy_GetPaletteStats(&white,
-                              &light_gray,
-                              &dark_gray,
-                              &black);
-
-      snprintf(palette_msg, sizeof(palette_msg),
-               "W=%lu LG=%lu DG=%lu B=%lu\r\n",
-               (unsigned long)white,
-               (unsigned long)light_gray,
-               (unsigned long)dark_gray,
-               (unsigned long)black);
-
-      USB_SendString(palette_msg);
-
-      HAL_Delay(500);
-  }
-
-//  GD_USB_Init();
-//  /* USER CODE END 2 */
-//
-//  /* Infinite loop */
-//  /* USER CODE BEGIN WHILE */
-//  while (1)
-//  {
-//	    USB_SendString("A\r\n");
-//
-//	    GameBoy_RunFrame();
-//
-//	    USB_SendString("B\r\n");
-//
-//	    GameBoy_GetFrame(gameboy_framebuffer);
-//
-//	    USB_SendString("C\r\n");
-//
-//	    HAL_Delay(100);
-//  }
-//  /* USER CODE END 3 */
+  /* USER CODE END 3 */
 }
 
 /**
@@ -304,6 +269,7 @@ void SystemClock_Config(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
   /* USER CODE BEGIN MX_GPIO_Init_1 */
 
   /* USER CODE END MX_GPIO_Init_1 */
@@ -311,6 +277,20 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+
+  /*Configure GPIO pins : PA0 PA1 PA2 PA3
+                           PA4 PA5 PA6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3
+                          |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_7;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 

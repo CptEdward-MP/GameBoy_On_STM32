@@ -2,6 +2,24 @@
 #include "mmu.h"
 #include "interrupts.h"
 
+
+volatile uint32_t ppu_bg_cycles = 0;
+volatile uint32_t ppu_sprite_cycles = 0;
+volatile uint32_t ppu_scan_cycles = 0;
+volatile uint32_t ppu_framebuffer_cycles = 0;
+
+volatile uint32_t ppu_drawing_calls = 0;
+
+
+static uint32_t (*ppu_cycle_counter)(void) = nullptr;
+
+extern "C"
+void ppu_set_cycle_counter(uint32_t (*counter)(void))
+{
+    ppu_cycle_counter = counter;
+}
+
+
 // #include "../../deps/magic_enum/magic_enum.hpp"
 
 auto ppu_stat_interrupt_service(GB* gb) -> void
@@ -56,6 +74,7 @@ auto ppu_oam_dma_transfer(GB* gb) -> void
  */
 auto ppu_OAM_scan_mode(GB* gb) -> void
 {
+
 
   if (gb->ppu.oam_data.is_OAM_scan_active == false)
     return;
@@ -377,6 +396,9 @@ static f_inline auto ppu_sprite_fifo_emulator(GB* gb) -> void
     case FIFO_state::pushtofifo:
     {
       u8 sprite_index = ppu.oam_data.oam_index[ppu.fifo.sprite_fetch_index];
+
+
+
       u8 sprite_x =
         ppu.oam_data.get_sp_byte(gb->mmu, sprite_index, OAM_byte::OAM_xpos);
 
@@ -486,52 +508,113 @@ static f_inline auto ppu_sendto_framebuffer(GB* gb) -> void
 
   return;
 }
-
 auto ppu_drawing_mode(GB* gb) -> void
 {
-  auto& ppu = gb->ppu;
-  auto& mmu = gb->mmu;
 
-  ppu_bg_fifo_emulator(gb);
+	ppu_drawing_calls++;
 
-  if (ppu.sprite_fifo_is_running)
-    ppu_sprite_fifo_emulator(gb);
+    auto& ppu = gb->ppu;
+    auto& mmu = gb->mmu;
 
-  /* check for window */
-  if ((ppu.fetch_source == FetchSource::background) &&
-      (ppu.wy_triggered) &&
-      (ppu.get_LCDC_bit(LCDC_bit::window_enable, mmu)) &&
-      (ppu.LX >= (mmu.io[WX] - 7)))
-  {
-    ppu.fetch_source = FetchSource::window;
-    ppu.window_triggered = true;
-    ppu.fifo.state = FIFO_state::gettileno_t1;
-    ppu.fifo.scx_fine_scroll = 0;
-    ppu.fifo.bg_fifo.fifo_clear();
-    ppu.fifo.fetcher_x = 0;
-  }
+    uint32_t start;
+    uint32_t end;
 
-  /* check for sprite */
-  for (u8 i = 0; i < 10; ++i)
-  {
-    u8 sprite_index = ppu.oam_data.oam_index[i];
-    u8 sprite_x =
-      ppu.oam_data.get_sp_byte(gb->mmu, sprite_index, OAM_byte::OAM_xpos);
+    /* Background FIFO */
 
-    if ((i < ppu.oam_data.total_sprites) &&
-        (!ppu.oam_data.consumed[i]) &&
-        (ppu.get_LCDC_bit(LCDC_bit::obj_enable, mmu)) &&
-        (sprite_x <= ppu.LX + 8))
+    if (ppu_cycle_counter)
+        start = ppu_cycle_counter();
+
+    ppu_bg_fifo_emulator(gb);
+
+    if (ppu_cycle_counter)
     {
-      ppu.oam_data.consumed[i] = true;
-      ppu.fifo.sprite_fetch_index = i;
-      ppu.sprite_fifo_is_running = true;
-      break;
+        end = ppu_cycle_counter();
+        ppu_bg_cycles += end - start;
     }
-  }
 
-  if (!ppu.sprite_fifo_is_running)
-    ppu_sendto_framebuffer(gb);
 
-  return;
+    /* Sprite FIFO */
+
+    if (ppu.sprite_fifo_is_running)
+    {
+        if (ppu_cycle_counter)
+            start = ppu_cycle_counter();
+
+        ppu_sprite_fifo_emulator(gb);
+
+        if (ppu_cycle_counter)
+        {
+            end = ppu_cycle_counter();
+            ppu_sprite_cycles += end - start;
+        }
+    }
+
+
+    /* Check for window */
+
+    if ((ppu.fetch_source == FetchSource::background) &&
+        (ppu.wy_triggered) &&
+        (ppu.get_LCDC_bit(LCDC_bit::window_enable, mmu)) &&
+        (ppu.LX >= (mmu.io[WX] - 7)))
+    {
+        ppu.fetch_source = FetchSource::window;
+        ppu.window_triggered = true;
+        ppu.fifo.state = FIFO_state::gettileno_t1;
+        ppu.fifo.scx_fine_scroll = 0;
+        ppu.fifo.bg_fifo.fifo_clear();
+        ppu.fifo.fetcher_x = 0;
+    }
+
+
+    /* Check for sprite */
+//
+//    if (ppu_cycle_counter)
+//        start = ppu_cycle_counter();
+//
+//    for (u8 i = 0; i < 10; ++i)
+//    {
+//        u8 sprite_index = ppu.oam_data.oam_index[i];
+//
+//        u8 sprite_x =
+//            ppu.oam_data.get_sp_byte(
+//                gb->mmu,
+//                sprite_index,
+//                OAM_byte::OAM_xpos);
+//
+//        if ((i < ppu.oam_data.total_sprites) &&
+//            (!ppu.oam_data.consumed[i]) &&
+//            (ppu.get_LCDC_bit(LCDC_bit::obj_enable, mmu)) &&
+//            (sprite_x <= ppu.LX + 8))
+//        {
+//            ppu.oam_data.consumed[i] = true;
+//            ppu.fifo.sprite_fetch_index = i;
+//            ppu.sprite_fifo_is_running = true;
+//            break;
+//        }
+//    }
+//
+//    if (ppu_cycle_counter)
+//    {
+//        end = ppu_cycle_counter();
+//        ppu_scan_cycles += end - start;
+//    }
+
+
+    /* Send pixel to framebuffer */
+
+    if (!ppu.sprite_fifo_is_running)
+    {
+        if (ppu_cycle_counter)
+            start = ppu_cycle_counter();
+
+        ppu_sendto_framebuffer(gb);
+
+        if (ppu_cycle_counter)
+        {
+            end = ppu_cycle_counter();
+            ppu_framebuffer_cycles += end - start;
+        }
+    }
+
+    return;
 }
