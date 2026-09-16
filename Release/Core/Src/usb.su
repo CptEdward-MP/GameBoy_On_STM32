@@ -1,0 +1,9 @@
+../Core/Src/usb.c:69:6:USB_Init	0	static
+../Core/Src/usb.c:82:12:USB_Send	8	static
+../Core/Src/usb.c:112:12:USB_SendString	8	static
+../Core/Src/usb.c:131:6:USB_RxCallback	20	static
+../Core/Src/usb.c:162:10:USB_DataAvailable	0	static
+../Core/Src/usb.c:168:10:USB_Read	20	static
+../Core/Src/usb.c:191:6:USB_FlushRX	0	static
+../Core/Src/usb.c:201:9:USB_IsConnected	0	static
+../Core/Src/usb.c:211:6:USB_TxCompleteCallback	0	static

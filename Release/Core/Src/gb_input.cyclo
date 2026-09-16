@@ -1,0 +1,6 @@
+../Core/Src/gb_input.c:83:16:GB_Input_ReadButton.constprop	1
+../Core/Src/gb_input.c:92:16:GB_Input_ReadRawState	8
+../Core/Src/gb_input.c:127:6:GB_Input_Init	1
+../Core/Src/gb_input.c:144:6:GB_Input_Update	3
+../Core/Src/gb_input.c:176:9:GB_Input_IsPressed	2
+../Core/Src/gb_input.c:188:9:GB_Input_GetState	1

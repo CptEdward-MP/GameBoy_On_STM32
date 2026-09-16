@@ -1,0 +1,23 @@
+19:01:21 **** Incremental Build of configuration Debug for project GameBoy_On_STM32 ****
+make -j16 all 
+arm-none-eabi-g++ "../GameBoy/Src/ppu.cc" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I"C:/Users/Manansh Pandey/STM32CubeIDE/workspace_1.19.0/GameBoy_On_STM32/GameBoy/Inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GameBoy/Src/ppu.d" -MT"GameBoy/Src/ppu.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "GameBoy/Src/ppu.o"
+arm-none-eabi-g++ -o "GameBoy_On_STM32.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Manansh Pandey\STM32CubeIDE\workspace_1.19.0\GameBoy_On_STM32\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GameBoy_On_STM32.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: GameBoy_On_STM32.elf
+ 
+arm-none-eabi-size  GameBoy_On_STM32.elf 
+arm-none-eabi-objdump -h -S GameBoy_On_STM32.elf  > "GameBoy_On_STM32.list"
+   text	   data	    bss	    dec	    hex	filename
+ 138580	   2380	  75608	 216568	  34df8	GameBoy_On_STM32.elf
+arm-none-eabi-objcopy  -O ihex GameBoy_On_STM32.elf  "GameBoy_On_STM32.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary GameBoy_On_STM32.elf  "GameBoy_On_STM32.bin"
+ 
+Finished building: GameBoy_On_STM32.hex
+Finished building: GameBoy_On_STM32.bin
+ 
+Finished building: GameBoy_On_STM32.list
+ 
+ 
+
+19:01:25 Build Finished. 0 errors, 0 warnings. (took 3s.878ms)
+
